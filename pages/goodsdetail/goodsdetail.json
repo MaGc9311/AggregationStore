@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "listtj": "/components/list/list"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "商品详情"
+}

@@ -1,0 +1,32 @@
+.home-product {
+  width: 700rpx;
+  margin: 20rpx auto;
+}
+
+.home-product .product-header {
+  width: 100%;
+  height: 40rpx;
+  padding: 20rpx 0;
+}
+
+.home-product .product-header .product-header-title {
+  width: 24.5%;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  float: left;
+}
+
+.home-product .product-header .product-header-title:last-child {
+  border-right: none;
+}
+
+.home-product .product-header .product-header-title .title1 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.home-product .product-header .product-header-title .title2 {
+  font-size: 24rpx;
+  color: #888;
+}

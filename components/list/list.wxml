@@ -1,0 +1,10 @@
+<view class="list-container">
+  <view class="list-wrap">
+    <view class="list-item" wx:for="{{bestListDatas}}" wx:for-item="bestList" wx:key="index" bindtap="todetail"
+      data-gid="{{bestList.goods_id}}">
+      <image class="img" src="{{bestList.goods_thumb}}"></image>
+      <view class="title">{{bestList.title}}</view>
+    </view>
+
+  </view>
+</view>

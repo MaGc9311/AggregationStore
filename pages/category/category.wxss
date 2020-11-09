@@ -1,0 +1,125 @@
+/* pages/category/category.wxss */
+.category {
+  position: fixed;
+}
+
+.category-search {
+  width: 100%;
+  height: 88rpx;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.category-search .search-lan {
+  width: 95%;
+  height: 60rpx;
+  background-color: #eee;
+  border-radius: 60rpx;
+  line-height: 60rpx;
+  text-indent: 14rpx;
+  font-size: 28rpx;
+  color: #888;
+}
+
+.category-search .search-lan icon {
+  transform: translateY(10rpx);
+  margin-right: 20rpx;
+}
+
+.category-left {
+  width: 230rpx;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #f7f7f7;
+  top: 88rpx;
+}
+
+.category-left .left-item {
+  width: 230rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.category-left .active {
+  border-left: 5rpx solid #f55;
+  background-color: #fff;
+  color: #f55;
+}
+
+.category-right {
+  position: fixed;
+  margin: 88rpx 0 0 240rpx;
+  width: 100%;
+  width: calc(100% - 240rpx);
+}
+
+.category-right .right-ad {
+  width: 95%;
+  height: 180rpx;
+  margin: 0 auto;
+  padding: 16rpx;
+}
+
+.category-right .right-ad .ad-img {
+  width: 100%;
+  height: 100%;
+}
+
+.category-right .right-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  margin: 20rpx 0;
+}
+
+.category-right .right-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.category-right .right-content .item {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+}
+
+.category-right .right-content .content-item {
+  width: 100%;
+  height: 160rpx;
+  display: inline-block;
+  margin: 0 auto 20rpx;
+}
+
+.category-right .right-content .content-item .item-img {
+  margin: 10rpx auto;
+  width: 104rpx;
+  height: 104rpx;
+}
+
+.category-right .right-content .content-item .item-img image {
+  width: 104rpx;
+  height: 104rpx;
+}
+
+.category-right .right-content .content-item .item-title {
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

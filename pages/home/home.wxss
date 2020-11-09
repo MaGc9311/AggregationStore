@@ -1,0 +1,11 @@
+/* pages/home/home.wxss */
+.home .school {
+  width: 700rpx;
+  height: 380rpx;
+  margin: 20rpx auto;
+}
+
+.home .school .school-img {
+  width: 700rpx;
+  height: 380rpx;
+}

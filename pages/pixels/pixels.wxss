@@ -1,0 +1,25 @@
+.list-wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-wrap .list-item {
+  width: 50%;
+  background: #fff;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.list-wrap .list-item image {
+  width: 340rpx;
+  height: 340rpx;
+}
+
+.list-wrap .list-item .title {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  overflow: hidden;
+}

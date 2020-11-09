@@ -1,0 +1,18 @@
+<view class="home">
+  <!-- 头部搜索导航轮播图 -->
+  <homeheader name="homeheader" swiperData="{{swiperData}}" headerBGC="{{headerBGC}}"></homeheader>
+  <!-- 30个导航清单 -->
+  <homenavlist name="homenavlist" navgroup="{{navgroup}}"></homenavlist>
+  <!-- 轮播新闻 -->
+  <homenews name="homenews"></homenews>
+  <!-- 开学季 -->
+  <view class="school">
+    <image class="school-img"
+      src="https://x.dscmall.cn/storage/data/gallery_album/original_img/CPvH5WHHbF0EoG9XjRQbbT3knMVCeEt9DlYGQhJM.png">
+    </image>
+  </view>
+  <!-- 秒杀 -->
+  <homeseckill name="homeseckill"></homeseckill>
+  <!-- 产品展示 -->
+  <homeproduct name="homeproduct"></homeproduct>
+</view>

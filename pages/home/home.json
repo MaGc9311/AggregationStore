@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "homeheader": "../../components/homecomponents/homeheader",
+    "homenavlist": "../../components/homecomponents/homenavlist",
+    "homenews": "../../components/homecomponents/homenews",
+    "homeseckill": "../../components/homecomponents/homeseckill",
+    "homeproduct": "../../components/homecomponents/homeproduct"
+  },
+  "navigationBarTitleText": "大商创"
+}

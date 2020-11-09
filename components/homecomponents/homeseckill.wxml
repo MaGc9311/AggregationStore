@@ -1,0 +1,13 @@
+<view class="seckill">
+  <view class="seckill-header">
+    <image class="seckill-img" src="{{imgurl}}"></image>
+    <view class="time-left">距结束时间：<view class="timeleft">{{hour}}</view>:<view class="timeleft">{{minute}}</view>:<view
+        class="timeleft">{{second}}</view>
+    </view>
+    <view class="tiem-slot" wx:for="{{time_title}}" wx:key="index" wx:for-item="title">
+      <view wx:for="{{title}}" wx:key="index">
+        <view></view>
+      </view>
+    </view>
+  </view>
+</view>

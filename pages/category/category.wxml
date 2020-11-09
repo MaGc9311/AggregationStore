@@ -1,0 +1,46 @@
+<view class="category">
+  <!-- 分类页搜索 -->
+  <view class="category-search">
+    <view class="search-lan">
+      <icon type="search"></icon><text>输入搜索关键词</text>
+    </view>
+  </view>
+  <!-- 分类左侧 -->
+  <view class="category-left">
+    <block wx:for="{{categoryLeftData}}" wx:key="idnex" wx:for-item="navitem">
+      <view class="left-item {{index==activeIndex?'active':''}}" bindtap="selectNav" data-index="{{index}}"
+        data-id="{{navitem.cat_id}}">
+        {{navitem.cat_name}}
+      </view>
+    </block>
+  </view>
+  <!-- 分类右侧 -->
+  <view class="category-right">
+    <scroll-view scroll-y="true" style="height:{{height}}rpx;">
+      <view class="right-ad">
+        <image class="ad-img" src="https://x.dscmall.cn/storage/data/touch_catads/15630384831872.jpg"></image>
+      </view>
+      <block>
+        <view wx:for="{{contentData}}" wx:key="idnex" wx:for-item="categoryContent">
+          <view class="right-title">
+            <view style="color:#999;">-</view>
+            <view>{{categoryContent.cat_name}}</view>
+            <view style="color:#999;">-</view>
+          </view>
+          <view class="right-content" >
+            <block wx:for="{{categoryContent.child}}" wx:key="index" wx:for-item="item">
+              <navigator url="/pages/goodslist/goodslist?cat_id={{item.cat_id}}" class="item">
+                <view class="content-item">
+                  <view class="item-img">
+                    <image src="{{item.touch_icon}}"></image>
+                  </view>
+                  <view class="item-title">{{item.cat_name}}</view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

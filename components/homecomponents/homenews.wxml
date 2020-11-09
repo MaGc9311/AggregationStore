@@ -1,0 +1,13 @@
+<view class="home-news">
+  <view class="content">
+    <view class="hot">
+      <image src="../../images/home/177_P_1597978466633.png" class="store-hot"></image>
+    </view>
+    <swiper vertical="true" autoplay="true" circular="true" class="news-list">
+      <swiper-item wx:for="{{hostList}}" wx:key="index"> {{hostList[index]}}</swiper-item>
+    </swiper>
+    <view class="turn-right">
+      <image src="../../images/home/turnright.png" class="turn-right-img"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="home-navlist">
+  <swiper class="swiper-view" easing-function bindchange="dot">
+    <swiper-item class="swiper-view-item" wx:for="{{navgroup}}" wx:key="index" wx:for-item="navitem">
+      <view class="nav-item" wx:for="{{navitem}}" wx:key="index" wx:for-item="item">
+        <image src="{{item.img}}" class="item-img"></image>
+        <view class="item-title">{{item.desc}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="navdot">
+    <view class="dotout">
+      <view class="dotin" style="margin-left:{{dotmove}}rpx;">
+      </view>
+    </view>
+  </view>
+</view>

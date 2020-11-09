@@ -1,0 +1,21 @@
+<view class="home-product">
+  <view class="product-header">
+    <view class="product-header-title">
+      <view class="title1">精选</view>
+      <view class="title2">为您推荐</view>
+    </view>
+    <view class="product-header-title">
+      <view class="title1">社区</view>
+      <view class="title2">新奇好物</view>
+    </view>
+    <view class="product-header-title">
+      <view class="title1">新品</view>
+      <view class="title2">潮流上新</view>
+    </view>
+    <view class="product-header-title">
+      <view class="title1">热卖</view>
+      <view class="title2">火热爆款</view>
+    </view>
+  </view>
+  <view class="product-content"></view>
+</view>

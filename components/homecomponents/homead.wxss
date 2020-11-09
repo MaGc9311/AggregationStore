@@ -1,0 +1,28 @@
+.home-ad {
+  width: 100%;
+}
+
+.home-ad .circula {
+  width: 100%;
+  height: 100rpx;
+  border-radius: 0 0 15% 15%;
+  background-color: #f34646;
+}
+
+.home-ad .ad-list {
+  width: 700rpx;
+  margin: -100rpx auto 0;
+  border-radius: 16rpx;
+}
+
+.home-ad .ad-list .ad-item {
+  width: 700rpx;
+  border-radius: 16rpx;
+}
+
+
+.home-ad .ad-item .ad-img {
+  width: 700rpx;
+  height: 304rpx;
+  border-radius: 16rpx;
+}

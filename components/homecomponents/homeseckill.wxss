@@ -1,0 +1,44 @@
+.seckill {
+  width: 700rpx;
+  height: 740rpx;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+}
+
+.seckill .seckill-header {
+  width: 100%;
+  height: 220rpx;
+}
+
+.seckill .seckill-header .seckill-img {
+  width: 200rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+  float: left;
+}
+
+.seckill .seckill-header .time-left {
+  width: 330rpx;
+  height: 40rpx;
+  float: right;
+  margin-top: 30rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.seckill .seckill-header .time-left .timeleft {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #FD402C;
+  display: inline-block;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-left: 7rpx;
+  margin-right: 7rpx;
+  color: #fff;
+}
+
+.seckill .seckill-header .time-left .timeleft:last-child {
+  margin-right: 0;
+}

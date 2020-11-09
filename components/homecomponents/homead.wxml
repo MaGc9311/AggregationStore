@@ -1,0 +1,21 @@
+<view class="home-ad">
+  <view class="circula" style="background-color: {{BGC}};"></view>
+  <swiper indicator-dots="true" autoplay="true" circular="true" indicator-color="rgba(200, 200, 200, .5)"
+    indicator-active-color="#fff" bindchange="getColor" class="ad-list">
+    <swiper-item class="ad-item">
+      <image src="../../images/home/177_P_1597978394783.jpg" class="ad-img"></image>
+    </swiper-item>
+    <swiper-item class="ad-item">
+      <image src="../../images/home/177_P_1597978395241.jpg" class="ad-img"></image>
+    </swiper-item>
+    <swiper-item class="ad-item">
+      <image src="../../images/home/177_P_1597978395260.jpg" class="ad-img"></image>
+    </swiper-item>
+    <swiper-item class="ad-item">
+      <image src="../../images/home/177_P_1597978396430.jpg" class="ad-img"></image>
+    </swiper-item>
+    <swiper-item class="ad-item">
+      <image src="../../images/home/177_P_1597978397105.jpg" class="ad-img"></image>
+    </swiper-item>
+  </swiper>
+</view>

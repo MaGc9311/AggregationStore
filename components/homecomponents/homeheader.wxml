@@ -1,0 +1,32 @@
+<view class="home-header" style="background-color: {{BGC}};">
+  <view class="search-arr">
+    <input class="search-lan" placeholder="请输入关键字" value="{{searchValue}}" />
+    <icon class="searchcion" size='20' type='search'></icon>
+    <view class="iconfont icon-xiaoxi" style="color:#fff;font-size:50rpx;"></view>
+  </view>
+  <view class="home-header-nav">
+    <swiper class="swiper-nav" display-multiple-items="5">
+      <swiper-item class="nav-item">首页</swiper-item>
+      <swiper-item class="nav-item">家用电器</swiper-item>
+      <swiper-item class="nav-item">男装女装</swiper-item>
+      <swiper-item class="nav-item">鞋靴箱包</swiper-item>
+      <swiper-item class="nav-item">手机数码</swiper-item>
+      <swiper-item class="nav-item">电脑办公</swiper-item>
+      <swiper-item class="nav-item">家居家纺</swiper-item>
+      <swiper-item class="nav-item">个人化妆</swiper-item>
+    </swiper>
+    <view class="category">
+      分类
+    </view>
+  </view>
+
+  <view class="home-ad">
+    <view class="circula" style="background-color: {{BGC}};"></view>
+    <swiper indicator-dots="true" autoplay="true" circular="true" indicator-color="rgba(200, 200, 200, .5)"
+      indicator-active-color="#fff" bindchange="getColor" class="ad-list">
+      <swiper-item class="ad-item" wx:for="{{swiperData}}" wx:key="index" wx:for-item="swiperItem">
+        <image class="ad-img" src="{{swiperItem.img}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

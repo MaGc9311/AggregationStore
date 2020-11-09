@@ -1,0 +1,45 @@
+@import"/style/iconfont.wxss";
+
+.home-news {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+
+.home-news .content {
+  margin-left: 24rpx;
+}
+
+.home-news .hot {
+  width: 140rpx;
+  height: 80rpx;
+  float: left;
+}
+
+.home-news .hot .store-hot {
+  width: 140rpx;
+  height: 80rpx;
+}
+
+.home-news .news-list {
+  float: left;
+  width: 498rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.home-news .content .turn-right {
+  width: 44rpx;
+  height: 88rpx;
+  float: left;
+  line-height: 88rpx;
+  text-align: center;
+}
+
+.home-news .content .turn-right .turn-right-img {
+  width: 40rpx;
+  height: 40rpx;
+}

@@ -1,0 +1,119 @@
+<import src="/wxParse/wxParse.wxml"></import>
+<view class="goodsdetail">
+  <scroll-view scroll-y="true" style="height:{{height}}rpx;">
+    <!-- 顶部导航 -->
+    <view class="goods-nav">
+      <view class="goods-navicon">
+        <view class="goods-back iconfont icon-zuojiantou" bindtap="goBackFn"></view>
+        <view class="goods-home iconfont icon-home"></view>
+      </view>
+      <view class="goods-goods active">商品</view>
+      <view class="goods-detail">详情</view>
+      <view class="goods-comment">评论</view>
+      <view class="goods-share iconfont icon-share"></view>
+    </view>
+    <!-- 轮播图 -->
+    <swiper class="goods-swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(200, 200, 200, .5)"
+      indicator-active-color="#fff">
+      <swiper-item class="img" wx:for="{{swiperData}}" wx:key="index">
+        <image src="{{item.img_url}}"></image>
+      </swiper-item>
+    </swiper>
+    <!-- 价格 -->
+    <view class="goods-price">
+      <view class="new-price">{{goodsDetailData.cost_price}}</view>
+      <view class="old-price">{{goodsDetailData.marketPrice}}</view>
+    </view>
+    <!-- 标题 -->
+    <view class="goods-title">
+      <view class="title"><text>{{goodsDetailData.goods_name}}</text></view>
+      <view class="sales-volume">
+        <view class="sales">销量{{goodsDetailData.sales_volume}}</view>
+        <view class="volume">当前库存{{goodsDetailData.goods_number}}</view>
+        <view class="adr">上海市 上海市</view>
+      </view>
+    </view>
+    <!-- 服务 -->
+    <view class="goods-serve">
+      <view class="serve-title">服务</view>
+      <view class="serve-content">正品保证 七天无理由退换 闪速配送</view>
+    </view>
+    <!-- 已选 -->
+    <view class="goods-selected" bindtap="showMask">
+      <view style="width:98%;display: flex;justify-content: space-between;">
+        <view class="selected-title">已选：</view>
+        <view class="selected-num">{{buyNum}}个</view>
+        <view class="iconfont icon-youjiantou1"></view>
+      </view>
+    </view>
+    <!-- 商品详情 -->
+    <view class="goods-detail-content" id="detail">
+      <view>商品详情</view>
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+    <!-- 商品推荐 -->
+    <view class="recommend">
+      <view>商品推荐</view>
+      <listtj bestListDatas="{{goodsDetailTJData}}" />
+    </view>
+    <!-- 商品评论 -->
+    <view class="comment">
+      <view>商品评论</view>
+      <view wx:for="{{goodsPJData}}" wx:key="index">
+        <image src="{{item.user_picture}}"></image>
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+    <!-- 物品详情底部 -->
+    <view class="footer-container">
+      <view class="footer-item">
+        <button class="kf" session-from="{{goodsDetailData.goods_id}}" open-type="contact"></button>
+        <view class="iconfont icon-kefu"></view>
+        <text>客服</text>
+      </view>
+      <view class="footer-item">
+        <view class="iconfont icon-shoucang1"></view>
+        <text>收藏</text>
+      </view>
+      <view class="footer-item" bindtap="toCart">
+        <view class="iconfont icon-31gouwuche"></view>
+        <text>购物车</text>
+        <view class="buyNun">0</view>
+      </view>
+      <view class="footer-item addcart" bindtap="addCart">
+        <text>加入购物车</text>
+      </view>
+      <view class="footer-item buy">
+        <text>立即购买</text>
+      </view>
+    </view>
+    <!-- 蒙板 -->
+    <view class="mask" wx:if="{{showMask}}" bindtap="closeMask"></view>
+    <view class="content" wx:if="{{showMask}}">
+      <view class="top">
+        <view class="maskGoodsImg">
+          <image class="img" src="{{goodsDetailData.goods_img}}">
+          </image>
+        </view>
+        <view class="top-right">
+          <view class="maskGoodsTitle">{{goodsDetailData.goods_name}}</view>
+          <view class="maskGoodsPrice">{{goodsDetailData.cost_price}}</view>
+          <view class="maskGoodsInventory">库存：{{goodsDetailData.goods_number}}</view>
+        </view>
+      </view>
+      <view class="mid">
+        <view class="itemName">数量</view>
+        <view class="changeNum">
+          <button type="default" disabled="{{dis}}" plain="true" bindtap="changeNumRedu">-</button>
+          <!-- 在设置input组件的宽度的时候 如果是这是width的值，则不能用百分比，而要用真实的数据，如px、rpx等；还有一种情况就是如果真需要用到百分比，那么可设置的input组件的 min-width 和 max-width 属性，但注意：如果设置的是 min-width 或 max-width 属性，不可设置 width 属性 -->
+          <input type="number" value="{{buyNum}}" bindblur="getNum" />
+          <button type="default" plain="true" bindtap="changeNumAdd">+</button>
+        </view>
+      </view>
+      <view class="down">
+        <view class="maskAddCart" bindtap="addCart">加入购物车</view>
+        <view class="buyNow">立即购买</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

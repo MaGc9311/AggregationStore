@@ -1,0 +1,54 @@
+<!-- 商品列表 -->
+<view class="goodslist">
+  <!-- 商品列表搜索 -->
+  <view class="goodslist-search">
+    <view class="search-in">
+      <text>输入搜索关键词</text>
+      <view class="iconfont icon-cx"></view>
+    </view>
+    <view class="search-out">
+      <view class="iconfont icon-fenlei"></view>
+    </view>
+  </view>
+  <!-- 筛选栏 -->
+  <view class="screen">
+    <view class="screen-item synthesis">
+      <view>综合</view>
+    </view>
+    <view class="screen-item new">
+      <view>新品</view>
+    </view>
+    <view class="screen-item cales">
+      <view>销量</view>
+    </view>
+    <view class="screen-item price">
+      <view>价格</view>
+    </view>
+    <view class="screen-item screen-out">
+      <view>筛选</view>
+    </view>
+  </view>
+  <!-- 商品内容 -->
+  <scroll-view scroll-y="true" class="goodslist-content" bindscrolltolower="loadMore">
+    <view class="goodslist-content-item">
+      <block wx:for="{{goodsListDatas}}" wx:key="index">
+        <view class="content-itme">
+          <navigator url="/pages/goodsdetail/goodsdetail?goods_id={{item.goods_id}}">
+            <view>
+              <view class="item-img">
+                <image src="{{item.goods_img}}"></image>
+              </view>
+              <view class="goods-name">{{item.goods_name}}</view>
+              <view class="goods-price">{{item.cost_price}}</view>
+              <view class="enter-store">
+                <view class="enter">进店</view>
+                <view class="hasbuy">{{item.sales_volume}}人已购买</view>
+                <view class="iconfont icon-31gouwuche"></view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

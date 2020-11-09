@@ -114,8 +114,8 @@ Page({
     var goods = this.data.goodsDetailData
     goods.isSelect = true
     goods.buyNum = this.data.buyNum
-    console.log(goods);
-    console.log(this.data.gid);
+    // console.log(goods);
+    // console.log(this.data.gid);
     var gid = this.data.gid
     var cartDatas = wx.getStorageSync('carts') || []
     console.log(cartDatas);
@@ -176,6 +176,11 @@ Page({
     this.getGoodsDetail(options.goods_id)
     this.getGoodsTJ(options.goods_id)
     this.getGoodsPJ(options.goods_id)
+    this.setData({
+      gid: options.goods_id
+    })
+    console.log(cartDatas);
+
   },
 
   /**

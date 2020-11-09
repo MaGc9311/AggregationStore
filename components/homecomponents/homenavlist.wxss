@@ -10,6 +10,7 @@
 .home-navlist .swiper-view {
   width: 700rpx;
   height: 400rpx;
+  border-radius: 20rpx;
 }
 
 .home-navlist .swiper-view-item {
@@ -17,6 +18,7 @@
   height: 400rpx;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 20rpx;
 }
 
 .home-navlist .swiper-view-item .nav-item {
